@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .font-thai {
+    font-family: var(--font-ibm-plex-thai), var(--font-koho), var(--font-thasadith), sans-serif;
+  }
+}
+
 @font-face {
   font-family: "PPEditorialNew-UltralightItalic";
   src: url("https://raw.githubusercontent.com/oeneco/file-thing/9f9223f211387b3764942fcff87f57523870916d/PPEditorialNew-UltralightItalic.ttf")
@@ -39,6 +45,23 @@
     font-family: var(--font-inter);
     font-weight: 300;
     opacity: 0.6;
+  }
+
+  :lang(th) {
+    font-family: var(--font-ibm-plex-thai);
+  }
+
+  :lang(th) h1,
+  :lang(th) h2,
+  :lang(th) h3,
+  :lang(th) h4,
+  :lang(th) h5,
+  :lang(th) h6 {
+    font-family: var(--font-koho);
+  }
+
+  :lang(th) p {
+    font-family: var(--font-thasadith);
   }
 }
 
